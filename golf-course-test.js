@@ -3,20 +3,20 @@ var GolfCourse = require('./golf-course.js');
 var Golfer = require('./golfer.js')
 
 describe('Golf Course', function () {
-  it.skip('should have a name and difficulty', function () {
+  it('should have a name and difficulty', function () {
     var golfCourse = new GolfCourse('Overland GC', 'moderate');
     assert.equal(golfCourse.name, 'Overland GC');
     assert.equal(golfCourse.difficulty, 'moderate');
   });
 
-  it.skip('should have a total number of openings for the day', function () {
+  it('should have a total number of openings for the day', function () {
     var golfCourse1 = new GolfCourse('Harvard Gulch', 'moderate', 25);
     var golfCourse2 = new GolfCourse('Todd Crick', 'hard', 11);
     assert.equal(golfCourse1.openings, 25);
     assert.equal(golfCourse2.openings, 11);
   });
 
-  it.skip('should have some unique features', function () {
+  it('should have some unique features', function () {
     var golfCourse1 = new GolfCourse('Arrowhead', 'hard', 42, ['great views', 'wildlife']);
     var golfCourse2 = new GolfCourse('Bay Hill', 'hard', 11, ['water', 'Arnies Place']);
     assert.deepEqual(golfCourse1.features, ['great views', 'wildlife']);
@@ -25,7 +25,7 @@ describe('Golf Course', function () {
 
   // PASS GOLFER TESTS BELOW BEFORE FINISHING REMAINING GOLF COURSE TESTS
 
-  it.skip('should accept golfers if there is room available', function () {
+  it('should accept golfers if there is room available', function () {
     var golfCourse = new GolfCourse('Bear Dance', 'hard', 8, ['bear shaped green, views']);
     var golfer1 = new Golfer({ name: 'Pat', handicap: 11 });
     var golfer2 = new Golfer({ name: 'Ted', handicap: 13 });
@@ -134,7 +134,7 @@ describe('Golfer', function () {
 
   it.skip('should have their performance on a hole affect their frustration **NOTE: Scores below 0 are considered excellent, scores of even par (0) are good, scores above 0 are considered bad**"', function () {
     var golfer1 = new Golfer({ name: 'Zach', handicap: 18 });
-   
+
 
     assert.equal(golfer1.frustration, 0);
 
@@ -163,4 +163,3 @@ describe('Golfer', function () {
     assert.equal(shot6, 'I AM THE GREATEST GOLFER ALIVE!');
   });
 });
-
