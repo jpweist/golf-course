@@ -71,26 +71,26 @@ describe('Golf Course', function () {
 });
 
 describe('Golfer', function () {
-  it.skip('should have a name and handicap', function () {
+  it('should have a name and handicap', function () {
     var golfer = new Golfer({ name: 'Will', handicap: 21 });
     assert.equal(golfer.name, 'Will');
     assert.equal(golfer.handicap, 21);
   });
 
-  it.skip('should start out minimally frustrated', function () {
+  it('should start out minimally frustrated', function () {
     var golfer = new Golfer({ name: 'Ryan', handicap: 19 });
     assert.equal(golfer.name, 'Ryan');
     assert.equal(golfer.frustration, 0);
   });
 
-  it.skip('should be able to calculate their average score based on par 72', function () {
+  it('should be able to calculate their average score based on par 72', function () {
     var golfer1 = new Golfer({ name: 'Kyle', handicap: 4 });
     var golfer2 = new Golfer({ name: 'Michelle', handicap: 10 });
     assert.equal(golfer1.calculateAvg(), 'I usually shoot a 76 on average.');
     assert.equal(golfer2.calculateAvg(), 'I usually shoot a 82 on average.');
   });
 
-  it.skip('should become frustrated based on the course difficulty (HARD or MODERATE - golf is never easy)', function () {
+  it('should become frustrated based on the course difficulty (HARD or MODERATE - golf is never easy)', function () {
     var golfer1 = new Golfer({ name: 'Thomas', handicap: 15 });
     var golfer2 = new Golfer({ name: 'Margit', handicap: 4 });
     var golfCourse1 = new GolfCourse('Bear Dance', 'hard', 44, ['elevation', 'views']);
@@ -109,7 +109,7 @@ describe('Golfer', function () {
     }
   }
 
-  it.skip('should gain confidence after more practice', function () {
+  it('should gain confidence after more practice', function () {
     var golfer1 = new Golfer({ name: 'Mark', handicap: 10 });
     assert.equal(golfer1.confidence, 0);
     simulatePractice(1, golfer1);
@@ -120,7 +120,7 @@ describe('Golfer', function () {
     assert.equal(golfer1.confidence, 70);
   });
 
-  it.skip('should be able to make marvel at the features of a golf course', function () {
+  it('should be able to make marvel at the features of a golf course', function () {
     var golfer4 = new Golfer({ name: 'Khalid', handicap: 6 });
     var golfCourse1 = new GolfCourse('Arrowhead', 'hard', 42, ['great views', 'wildlife'])
     var golfer5 = new Golfer({ name: 'Amy', handicap: 3 });
@@ -132,7 +132,7 @@ describe('Golfer', function () {
     assert.equal(golfer5.marvel(golfCourse2), 'I love the undulating greens and creative layout on this course!')
   });
 
-  it.skip('should have their performance on a hole affect their frustration **NOTE: Scores below 0 are considered excellent, scores of even par (0) are good, scores above 0 are considered bad**"', function () {
+  it('should have their performance on a hole affect their frustration **NOTE: Scores below 0 are considered excellent, scores of even par (0) are good, scores above 0 are considered bad**"', function () {
     var golfer1 = new Golfer({ name: 'Zach', handicap: 18 });
 
 
