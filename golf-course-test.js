@@ -56,7 +56,7 @@ describe('Golf Course', function () {
     assert.deepEqual(golfCourse.currentlyPlaying, ['Bridget', 'Joanna', 'Kevin', 'Ted', 'Pat']);
   });
 
-  it.skip('should recommend which tees to play from based on handicap', function () {
+  it('should recommend which tees to play from based on handicap', function () {
     var golfCourse = new GolfCourse('Fossil Trace', 'hard', 5, ['artifacts on course', 'layout']);
     var golfer1 = new Golfer({ name: 'Ruth', handicap: 10 });
     var golfer2 = new Golfer({ name: 'Irwin', handicap: 11 });
